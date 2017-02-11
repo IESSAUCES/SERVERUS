@@ -1,6 +1,6 @@
 # SERVERUS
 *Guia de instalación paso a paso*
-
+[Servidor SERVERUS](http://www.serverus.local "Servidor SERVERUS")
 
 ## 1. CONFIGURACIÓN DEL SERVIDOR
 - [ ] Nombre del servidor
@@ -17,29 +17,46 @@
 
 ## 4. SERVIDOR DNS
 - [ ] Instalación bind9
-- [ ] Configuración de la zona directa "nombredezona.local"
+- [ ] Configuración de la zona directa "xxxx.xxx"
 - [ ] Configuración de la zona inversa 
 - [ ] Reiniciar el servicio
-- [ ] Cambiar la configuración de red
+- [ ] Cambiar la configuración de red (/etc/network/interfaces)
 - [ ] Comprobar el funcionamiento.
 
-## 5. SERVIDOR DE APLICACIONES PHP con acceso a MySQL
+## 5. SERVIDOR DE APLICACIONES PHP con MySQL
 
-### - [ ] Instalación de MySQL
-    -[ ] Testear funcionameinto de MySQL
+### MySQL
+
+- [ ] Instalación de MySQL
+- [ ] Testear funcionamiento de MySQL
     
-### - [ ] Instalación de PHP7.0
-    - [ ] Testear funcionamiento de PHP
-### - [ ] Instalación de módulos
-    - [ ] php7.0 
-    - [ ] libapache2-mod-php7.0 
-    - [ ] php-mbstring 
-    - [ ] php-gettext
-    - [ ] 
+### PHP 7.0
+- [ ] Instalación de **PHP7.0**
+- [ ] Testear funcionamiento de PHP
+        
+### MÓDULOS PHP7.0
+```bash
+sudo apt-get install nombredelmodulo
+```
+### Instalación de módulos
+- [ ] libapache2-mod-php7.0 
+- [ ] php7.0-mysql
+- [ ] php7.0-intl
+- [ ] php7.0-curl
+
 ### Instalacion phpMyAdmin
-  -[ ] Instalación phpmyadmin
-  -[ ] Comprobación http://IP/phpmyadmin
+- [ ] Instalación phpmyadmin
+- [ ] Comprobación http://IP/phpmyadmin
   
   
+## 6. CONFIGURACIÓN DE USUARIOS
+
+#### CREACIÓN DE USUARIOS
+
+    1. Crear grupo sftpusers
     
+    sudo  addgroup sftpusers
+    
+    2. Ejecutar el script crearUsuario.sh
+    *EJECUTAR EL SCRIPT CREAR USUARIOS*  
 
