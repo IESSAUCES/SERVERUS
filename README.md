@@ -35,6 +35,7 @@
     - [ ] libapache2-mod-php7.0 
     - [ ] php-mbstring 
     - [ ] php-gettext
+    - [ ] 
 ### Instalacion phpMyAdmin
   -[ ] Instalación phpmyadmin
   -[ ] Comprobación http://IP/phpmyadmin
