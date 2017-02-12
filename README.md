@@ -1,7 +1,6 @@
 # SERVERUS
 *Guia de instalación paso a paso*
 [Servidor SERVERUS](http://www.serverus.local "Servidor SERVERUS")
-
 ## 1. CONFIGURACIÓN DEL SERVIDOR
 - [ ] Nombre del servidor
 - [ ] Configuración de red
@@ -49,14 +48,21 @@ sudo apt-get install nombredelmodulo
 - [ ] Comprobación http://IP/phpmyadmin
   
   
-## 6. CONFIGURACIÓN DE USUARIOS
+## 6. DAR DE ALTA USUARIOS DEL SISTEMA
 
-#### CREACIÓN DE USUARIOS
+1. Crear grupo sftpusers
+```bash
+sudo  addgroup sftpusers
+```
+2. Ejecutar el script crear usuarios
+```bash
+sudo  ./crearUsuario.sh
+```
+3. SFTP: Enjaular o aislar usuarios
 
-    1. Crear grupo sftpusers
+## 7. MYSQL: DAR DE ALTA USUARIOS
+
+
+
     
-    sudo  addgroup sftpusers
-    
-    2. Ejecutar el script crearUsuario.sh
-    *EJECUTAR EL SCRIPT CREAR USUARIOS*  
 
