@@ -18,7 +18,7 @@ sudo addgroup nombregrupo
 ```
 ## 3. COMPROBAR: Apache instalado
 ```bash
-sudo dpkg-query   apache2
+sudo dpkg-query --list  apache2
 ```
 ## 4. COMPROBAR: Directorio del usuario
 ```bash
