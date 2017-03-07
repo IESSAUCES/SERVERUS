@@ -1,30 +1,41 @@
 # SERVERUS: SFTP
 *Guia de instalación paso a paso*
 [Servidor SERVERUS](http://www.serverus.local "Servidor SERVERUS")
-## 1.CREACIÓN DE GRUPO DE USUARIOS sftpusers
+
+## 1. CONFIGURACIÓN DEL SERVIDOR
+- [ ] Nombre del servidor
+- [ ] Configuración de red
+- [ ] Conectividad Internet
+
+## 2. ACCESO REMOTO
+- [ ] Instalación de SSH
+- [ ] Cliente SSH
+
+
+## 2.CREACIÓN DE GRUPO DE USUARIOS sftpusers
 ```bash
 sudo addgroup nombregrupo
 ```
-## 2. COMPROBAR: Apache instalado
+## 3. COMPROBAR: Apache instalado
 ```bash
 sudo dpkg-query   apache2
 ```
-## 3. COMPROBAR: Directorio del usuario
+## 4. COMPROBAR: Directorio del usuario
 ```bash
 ls /var/www
 ```
 
-## 4. CREAR USUARIO
+## 5. CREAR USUARIO
 ```bash
 sudo useradd -G sftpusers -m -d  "directoriohome" -g www-data -p "paso" "nombreUsuario"
 ```
 
-## 5. CAMBIAR EL PASSWORD
+## 6. CAMBIAR EL PASSWORD
 ```bash
 sudo passwd nombreUsuario
 ```
 
-## 6. PERMISOS Y CARPETA public_html
+## 7. PERMISOS Y CARPETA public_html
 ```bash
 #Necesario para el chroot
 chown root:root "/var/www/nombreUsuario"
@@ -40,7 +51,7 @@ chown nombreUsuario "/var/www/nombreUsuario/public_html"
 
 ```
     
-## 7.-  Configuración de SFTP
+## 8.-  Configuración de SFTP
 
 - [ ] Copia de seguridad del fichero 
 
@@ -74,8 +85,8 @@ Match Group ftpusers
 ChrootDirectory %h
 ForceCommand internal-sftp
 ```
-## 8.- Reiniciar el servicio
+## 9.- Reiniciar el servicio
 ```bash
 sudo service ssh restart
 ```
-## 9.- Comprobación desde FileZilla o bien, Notepad++
+## 10.- Comprobación desde FileZilla o bien, Notepad++
