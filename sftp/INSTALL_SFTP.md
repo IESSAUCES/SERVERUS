@@ -45,7 +45,7 @@ mkdir "/var/www/nombreUsuario/public_html"
 
 
 #Asignamos permisos al directorio www
-chmod -c 2775 /var/www/nombreUsuario/public_html"
+chmod -c 2775 "/var/www/nombreUsuario/public_html"
 chgrp "www-data" "/var/www/nombreUsuario/public_html"
 chown nombreUsuario "/var/www/nombreUsuario/public_html"
 
