@@ -35,7 +35,7 @@ sudo useradd -G sftpusers -m -d  "directoriohome" -g www-data -p "paso" "nombreU
 sudo passwd nombreUsuario
 ```
 
-## 7. PERMISOS Y CARPETA public_html
+## 7. PERMISOS Y CARPETA public_html (Todos los comandos ejecutador como root)
 ```bash
 #Necesario para el chroot
 chown root:root "/var/www/nombreUsuario"
