@@ -22,8 +22,31 @@
 sudo apt-get update
 sudo apt-get install bind9
 ```
-- [ ] Configuración de zona de resolucion directa "serverus.local"
+- [ ] Configuración de zona de resolucion directa "serverus.local". Crear el fichero /etc/bind/db.samuel.local.
 
+```bash
+;
+; BIND data file for SVG-US02.samuel.local
+;
+$TTL	604800
+@	IN	SOA	SVG-US02.samuel.local. svara71.gmail.samuel.local. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 3600 )		; Negative Cache TTL
+;
+@		IN	NS	SVG-US02.samuel.local.
+@		IN	A	192.168.3.102
+SVG-US02	IN	A	192.168.3.102
+www		IN	CNAME	SVG-US02
+ftp.samuel.local.	IN	CNAME	SVG-US02
+````
+- [ ] Chequear el fichero anterior.
+´´´bash
+# sudo named-checkzone  nombredelazona    ficherocontienelazona
+named-checkzone  samuel.local      /etc/bind/db.samuel.local
+´´´
 
 
 ## 5. SERVIDOR DE APLICACIONES PHP con MySQL
