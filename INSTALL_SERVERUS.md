@@ -11,16 +11,20 @@
 - [ ] Cliente SSH
 
 ## 3. SERVIDOR WEB
+
 - [ ] Instalación apache
 - [ ] Comprobación de funcionamiento
 
 ## 4. SERVIDOR DNS
 - [ ] Instalación bind9
-- [ ] Configuración de la zona directa "xxxx.xxx"
-- [ ] Configuración de la zona inversa 
-- [ ] Reiniciar el servicio
-- [ ] Cambiar la configuración de red (/etc/network/interfaces)
-- [ ] Comprobar el funcionamiento.
+
+```bash
+sudo apt-get update
+sudo apt-get install bind9
+```
+- [ ] Configuración de zona de resolucion directa "serverus.local"
+
+
 
 ## 5. SERVIDOR DE APLICACIONES PHP con MySQL
 
